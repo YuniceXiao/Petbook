@@ -1,0 +1,116 @@
+[
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/diva.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/angry.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/corgi.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog", "Rabbit"],
+    "title": "No title",
+    "imageUrl": "/dogImages/dogandrabit.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/pom.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/sunflower.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/skaterboy.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/takemeout.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/twins.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/fakesmile.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/kiss.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Dog"],
+    "title": "No title",
+    "imageUrl": "/dogImages/maltese.jpeg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/angry.jpg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/bigfamily.jpg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/blueeyes.jpg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/family.jpg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/glasses.jpg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/mini.jpg",
+    "description": "No description"
+  },
+  {
+    "categories": ["Cat"],
+    "title": "No title",
+    "imageUrl": "/catImages/mask.jpeg",
+    "description": "No description"
+  }
+]

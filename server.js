@@ -1,15 +1,21 @@
 const { ApolloServer, gql } = require('apollo-server')
 const mongoose = require('mongoose')
-require('dotenv').config({path: 'variables.env'})
-const User = require('./models/User')
-const Post = require('./models/Post')
+
 const fs = require('fs')
 const path = require('path')
+
+
+//import typeDefs and resolvers
 const filePath = path.join(__dirname, 'typeDefs.gql')
 const typeDefs = fs.readFileSync(filePath, 'utf-8')
 const resolvers = require('./resolvers')
 
+//import Environment variables and mongoose model
+require('dotenv').config({path: 'variables.env'})
+const User = require('./models/User')
+const Post = require('./models/Post')
 
+//connect to Mongo database
 mongoose
     .connect(
         process.env.MONGO_URI,
@@ -19,7 +25,7 @@ mongoose
     .catch(err => console.error(err))
 
 
-
+//create apollo/graphQL server usring typeDefs, resolvers and models
 const server = new ApolloServer({
     typeDefs,
     resolvers,
