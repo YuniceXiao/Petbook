@@ -36,4 +36,4 @@ const server = new ApolloServer({
 })
 
 
-server.listen(3000).then(({url})=> {console.log(`Server listening on ${url}`)})
+server.listen().then(({url})=> {console.log(`Server listening on ${url}`)})
