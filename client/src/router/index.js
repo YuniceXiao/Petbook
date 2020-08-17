@@ -6,7 +6,7 @@ import Posts from "../components/Posts/Posts.vue"
 import Profile from "../components/Auth/Profile.vue"
 import Signin from "../components/Auth/Signin.vue"
 import Signup from "../components/Auth/Signup.vue"
-
+import AuthGuard from "../AuthGuard"
 
 Vue.use(VueRouter)
 
@@ -19,17 +19,19 @@ Vue.use(VueRouter)
   {
     path: '/post/add',
     name: 'AddPost',
-    component: AddPost
+    component: AddPost,
+    beforeEnter: AuthGuard //only allow login user to add post
   },
   {
     path: '/posts',
     name: 'PostS',
-    component: Posts
+    component: Posts,
   },
   {
     path: '/profile',
     name: 'Profile',
-    component: Profile
+    component: Profile,
+    beforeEnter: AuthGuard //only allow login user to view profile
 
   },{
     path: '/signup',

@@ -9,11 +9,47 @@ import '@babel/polyfill'
 import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 
+import FormAlert from './components/Shared/FormAlert'
+
+Vue.component("form-alert", FormAlert) //so form-alert can be used as a tag globally
 Vue.use(VueApollo)
 
 //set up apollo client
 export const defaultClient = new ApolloClient({
-  uri: "http://localhost:4000/graphql"
+  uri: "http://localhost:4000/graphql",
+  // include auth token with requests made to backend
+  fecthOptions: {
+    credentials : "inlude"
+  },
+  request: operation => {
+    //if no token in localStorage, add it
+    if(!localStorage.token){
+      localStorage.setItem("token", "")
+    }
+    //operation adds the token to an auth header, which is sent to backend
+    operation.setContext({
+      headers: {
+        authorization: localStorage.getItem("token")
+      }
+    })
+  },
+  onError: ({ graphQLErrors, networkError }) => {
+    if (networkError) {
+      console.log("[networkError]", networkError);
+    }
+
+    if (graphQLErrors) {
+      for (let err of graphQLErrors) {
+        console.dir(err);
+        if (err.name === "AuthenticationError") {
+          // set auth error in state (to show in snackbar)
+          store.commit("setAuthError", err);
+          // signout user (to clear token)
+          store.dispatch("signoutUser");
+        }
+      }
+    }
+  }
 })
 
 const apolloProvider = new VueApollo({defaultClient})
@@ -26,6 +62,10 @@ new Vue({
   router,
   store,
   vuetify,
-  render: h => h(App)
+  render: h => h(App),
+  created(){
+    // execute getCurrentUser query
+    this.$store.dispatch("getCurrentUser")
+  }
 }).$mount('#app')
 
