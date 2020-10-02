@@ -7,3 +7,5 @@
 - **Backend**: Apollo GraphQL, GraphQL, Mongoose
 
 - **Database**: MongoDB
+
+This is a hackthon project built in four days all by Yunice Xiao.
